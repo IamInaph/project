@@ -1,0 +1,389 @@
+/*//////////////////////////////////////////////////////////////////
+[ DARK MODE STYLES ]*/
+
+/* Root dark mode class */
+html.dark-mode {
+  color-scheme: dark;
+}
+
+/* Body background */
+.dark-mode body,
+.dark-mode html {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ COLOR OVERRIDES ]*/
+
+/* Background colors */
+.dark-mode .bg0 { background-color: #1a1a1a; }
+.dark-mode .bg2 { background-color: #2a2a2a; }
+.dark-mode .bg3 { background-color: #0f0f0f; }
+.dark-mode .bg6 { background-color: #252525; }
+.dark-mode .bg7 { background-color: #1f1f1f; }
+.dark-mode .bg8 { background-color: #222; }
+.dark-mode .bg9 { background-color: rgba(30,30,30,0.95); }
+
+/* Text colors - invert dark/light */
+.dark-mode .cl0 { color: #1a1a1a; }
+.dark-mode .cl2 { color: #e5e5e5; }
+.dark-mode .cl3 { color: #c0c0c0; }
+.dark-mode .cl4 { color: #a0a0a0; }
+.dark-mode .cl5 { color: #f0f0f0; }
+.dark-mode .cl6 { color: #b0b0b0; }
+.dark-mode .cl7 { color: #808080; }
+.dark-mode .cl8 { color: #d0d0d0; }
+.dark-mode .cl9 { color: #909090; }
+.dark-mode .cl10 { color: #f5f5f5; }
+.dark-mode .cl12 { color: #555; }
+
+/* Keep primary color (cl1) same */
+.dark-mode .cl1 { color: #8b9cf0; }
+
+/*//////////////////////////////////////////////////////////////////
+[ HEADER ]*/
+
+.dark-mode .top-bar {
+  background-color: #717fe0;
+}
+
+.dark-mode .wrap-menu-desktop {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .wrap-menu-desktop.how-shadow1 {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.5);
+}
+
+.dark-mode .main-menu > li > a {
+  color: #e5e5e5;
+}
+
+.dark-mode .main-menu > li > a:hover {
+  color: #8b9cf0;
+}
+
+.dark-mode .icon-header-item {
+  color: #e5e5e5;
+}
+
+.dark-mode .wrap-header-mobile {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .menu-mobile {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .main-menu-m > li {
+  border-color: #333;
+}
+
+.dark-mode .main-menu-m > li > a {
+  color: #e5e5e5;
+}
+
+.dark-mode .topbar-mobile {
+  background-color: #2a2a2a;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ FOOTER ]*/
+
+.dark-mode footer.bg3 {
+  background-color: #0f0f0f;
+}
+
+.dark-mode .stext-107.cl7 {
+  color: #999;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ CART SIDEBAR ]*/
+
+.dark-mode .wrap-header-cart {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .header-cart-wrapitem {
+  border-color: #333;
+}
+
+.dark-mode .header-cart-item-name {
+  color: #e5e5e5;
+}
+
+.dark-mode .header-cart-item-info {
+  color: #b0b0b0;
+}
+
+.dark-mode .header-cart-total {
+  border-color: #333;
+  color: #e5e5e5;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ PRODUCT CARDS ]*/
+
+.dark-mode .block2-pic {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .block2-txt {
+  background-color: #1a1a1a;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ FILTER PANEL ]*/
+
+.dark-mode .wrap-filter.bg6 {
+  background-color: #252525;
+}
+
+.dark-mode .filter-link {
+  color: #b0b0b0;
+}
+
+.dark-mode .filter-link:hover,
+.dark-mode .filter-link.filter-link-active {
+  color: #8b9cf0;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ FORMS & INPUTS ]*/
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #2a2a2a;
+  color: #e5e5e5;
+  border-color: #444;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #888;
+}
+
+.dark-mode .bor8 {
+  border-color: #444;
+}
+
+.dark-mode .bor10 {
+  border-color: #444;
+}
+
+.dark-mode .bor7 {
+  border-color: #444;
+}
+
+.dark-mode .bo5 {
+  border-color: #444;
+}
+
+.dark-mode .bor19 {
+  border-color: #444;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ TABLES ]*/
+
+.dark-mode .table-shopping-cart {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .table-shopping-cart .table_head {
+  background-color: #252525;
+}
+
+.dark-mode .table-shopping-cart .table_row {
+  border-color: #333;
+}
+
+.dark-mode .table-shopping-cart .column-1,
+.dark-mode .table-shopping-cart .column-2,
+.dark-mode .table-shopping-cart .column-3,
+.dark-mode .table-shopping-cart .column-4,
+.dark-mode .table-shopping-cart .column-5 {
+  color: #e5e5e5;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ QUANTITY CONTROLS ]*/
+
+.dark-mode .wrap-num-product {
+  border-color: #444;
+}
+
+.dark-mode .btn-num-product-down,
+.dark-mode .btn-num-product-up {
+  background-color: #2a2a2a;
+  color: #e5e5e5;
+}
+
+.dark-mode .num-product {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ MODALS ]*/
+
+.dark-mode .wrap-modal1 {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .modal-content {
+  background-color: #1a1a1a;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ BLOG ]*/
+
+.dark-mode .how-pos5 {
+  background-color: rgba(30,30,30,0.95);
+}
+
+.dark-mode .p-all-16 {
+  background-color: #1a1a1a;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ BREADCRUMB ]*/
+
+.dark-mode .bread-crumb a {
+  color: #b0b0b0;
+}
+
+.dark-mode .bread-crumb a:hover {
+  color: #8b9cf0;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ TABS ]*/
+
+.dark-mode .tab01 .nav-tabs {
+  border-color: #333;
+}
+
+.dark-mode .tab01 .nav-link {
+  color: #b0b0b0;
+  background-color: transparent;
+}
+
+.dark-mode .tab01 .nav-link:hover,
+.dark-mode .tab01 .nav-link.active {
+  color: #e5e5e5;
+  border-color: #333 #333 #1a1a1a;
+}
+
+.dark-mode .tab-pane {
+  color: #c0c0c0;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ BUTTONS ]*/
+
+/* Keep primary buttons the same */
+.dark-mode .hov-btn1:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .hov-btn3:hover {
+  background-color: #8b9cf0;
+  color: #fff;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ QUICK VIEW MODAL ]*/
+
+.dark-mode .overlay-modal1 {
+  background-color: rgba(0,0,0,0.85);
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ SEARCH MODAL ]*/
+
+.dark-mode .modal-search-header {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .modal-search-header input {
+  background-color: #2a2a2a;
+  color: #e5e5e5;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ SELECT DROPDOWNS ]*/
+
+.dark-mode .rs1-select2 select,
+.dark-mode .rs2-select2 select {
+  background-color: #2a2a2a;
+  color: #e5e5e5;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ SLICK SLIDER ]*/
+
+.dark-mode .slick-dots li button:before {
+  color: #666;
+}
+
+.dark-mode .slick-dots li.slick-active button:before {
+  color: #8b9cf0;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ SWIPER ]*/
+
+.dark-mode .swiper-pagination-bullet {
+  background-color: #666;
+}
+
+.dark-mode .swiper-pagination-bullet-active {
+  background-color: #8b9cf0;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ BACK TO TOP BUTTON ]*/
+
+.dark-mode .btn-back-to-top {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .btn-back-to-top:hover {
+  background-color: #8b9cf0;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ TOOLTIP ]*/
+
+.dark-mode .tooltip100::before {
+  background-color: #333;
+  color: #e5e5e5;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ MISC ]*/
+
+.dark-mode .how-bor1,
+.dark-mode .how-bor2 {
+  border-color: #333;
+}
+
+.dark-mode .bo4 {
+  border-color: #333;
+}
+
+.dark-mode .bor9 {
+  border-color: #444;
+}
+
+/* Logo invert for dark mode */
+.dark-mode .logo img,
+.dark-mode .logo-mobile img {
+  filter: brightness(0) invert(1);
+}
+
