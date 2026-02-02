@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useCartStore from '../../store/cartStore';
 import useWishlistStore from '../../store/wishlistStore';
 import useUIStore from '../../store/uiStore';
 import useThemeStore from '../../store/themeStore';
+import useAuthStore from '../../store/authStore';
 
 export default function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -14,6 +16,12 @@ export default function Header() {
   const wishlistCount = useWishlistStore((state) => state.getItemCount());
   const { openCart, openSearch } = useUIStore();
   const { isDarkMode, toggleTheme } = useThemeStore();
+  const { user, logout } = useAuthStore();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,9 +55,29 @@ export default function Header() {
               <a href="#" className="flex-c-m trans-04 p-lr-25">
                 Help & FAQs
               </a>
-              <a href="#" className="flex-c-m trans-04 p-lr-25">
-                My Account
-              </a>
+              {user ? (
+                <>
+                  <span className="flex-c-m trans-04 p-lr-25">
+                    Hi, {user.name}
+                  </span>
+                  <a
+                    href="#"
+                    className="flex-c-m trans-04 p-lr-25"
+                    onClick={(e) => { e.preventDefault(); handleLogout(); }}
+                  >
+                    Logout
+                  </a>
+                </>
+              ) : (
+                <>
+                  <Link to="/login" className="flex-c-m trans-04 p-lr-25">
+                    Login
+                  </Link>
+                  <Link to="/signup" className="flex-c-m trans-04 p-lr-25">
+                    Sign Up
+                  </Link>
+                </>
+              )}
               <a href="#" className="flex-c-m trans-04 p-lr-25">
                 EN
               </a>
@@ -193,7 +221,23 @@ export default function Header() {
           <li>
             <div className="right-top-bar flex-w h-full">
               <a href="#" className="flex-c-m p-lr-10 trans-04">Help & FAQs</a>
-              <a href="#" className="flex-c-m p-lr-10 trans-04">My Account</a>
+              {user ? (
+                <>
+                  <span className="flex-c-m p-lr-10 trans-04">Hi, {user.name}</span>
+                  <a
+                    href="#"
+                    className="flex-c-m p-lr-10 trans-04"
+                    onClick={(e) => { e.preventDefault(); handleLogout(); setIsMobileMenuOpen(false); }}
+                  >
+                    Logout
+                  </a>
+                </>
+              ) : (
+                <>
+                  <Link to="/login" className="flex-c-m p-lr-10 trans-04" onClick={() => setIsMobileMenuOpen(false)}>Login</Link>
+                  <Link to="/signup" className="flex-c-m p-lr-10 trans-04" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</Link>
+                </>
+              )}
               <a href="#" className="flex-c-m p-lr-10 trans-04">EN</a>
               <a href="#" className="flex-c-m p-lr-10 trans-04">USD</a>
             </div>
